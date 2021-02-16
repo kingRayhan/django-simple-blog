@@ -1,0 +1,11 @@
+{% extends 'layouts/home.html' %}
+
+<div>
+  {% block content %}
+  {% for article in articles %}
+    <div class=" mb-8">
+        {% include 'partials/_article.html' %}
+    </div>
+  {% endfor %}
+  {% endblock %}
+</div>

@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'app.css' %}" />
+  </head>
+  <body>
+    {% include '../partials/_navbar.html' %}
+
+    <div class="w-6/12 mx-auto">{% block content %}{% endblock %}</div>
+
+    <script src="{% static 'js/plugins.min.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+  </body>
+</html>
