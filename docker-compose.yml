@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  backend:
+    build: .
+    restart: always
+    ports:
+      - "5000:8000"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    depends_on:
+      - database
+    networks:
+      - dj
+
+  database:
+    image: "postgres:13.2"
+    restart: always
+    ports:
+      - "54321:5432"
+    environment:
+      - LC_ALL=C.UTF-8
+      - POSTGRES_PASSWORD=app
+      - POSTGRES_USER=app
+      - POSTGRES_DB=app
+    volumes:
+      - ./database:/var/lib/postgresql/data
+    networks:
+      - dj
+
+networks:
+  dj:
+    driver: bridge

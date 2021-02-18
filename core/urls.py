@@ -10,3 +10,16 @@ urlpatterns = [
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+"""
+Learn Todo
+------------------------------------
+- Templating
+- Static file and media load
+- Orm
+- Authentication
+- Middleware
+- Rest Framework and Graphene(Graphql)
+- Queue/Event
+- Socket
+"""

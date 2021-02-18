@@ -1,15 +1,14 @@
 <div>
   {% if article.thumbnail %}
   <div class="overflow-hidden">
-    <a href="{% url 'articles.show' article.slug %}"><img
-        src="{{ article.thumbnail.url }}"
-        alt="{{ article.title }}"
+    <a href="{% url 'articles.show' article.slug %}"
+      ><img src="{{ article.thumbnail.url }}" alt="{{ article.title }}"
     /></a>
   </div>
   {% endif %}
 
   <div class="mt-5 ml-20 mr-20">
-    <h2 class="mb-2 text-2xl font-bold">
+    <h2 class="mb-2 text-3xl font-bold">
       <a href="{% url 'articles.show' article.slug %}">{{ article.title }}</a>
     </h2>
     <div class="flex items-center my-3 space-x-5">
@@ -17,8 +16,6 @@
       <p class="text-xs text-gray-600">// 4 min read</p>
     </div>
 
-    <p class="font-serif text-gray-600">
-      {{ article.excerpt }}
-    </p>
+    <p class="font-serif text-2xl text-gray-600">{{ article.excerpt }}</p>
   </div>
 </div>

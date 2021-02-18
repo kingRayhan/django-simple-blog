@@ -10,6 +10,8 @@ django-editorjs = "*"
 pillow = "*"
 django-autoslug = "*"
 django-seed = "*"
+psycopg2 = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 autopep8 = "*"

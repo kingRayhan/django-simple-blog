@@ -10,5 +10,6 @@ def index(request):
     return render(request, template_name='articles/index.html', context=context)
 
 
-def show(request):
-    return render(request, template_name='articles/show.html')
+def show(request, slug):
+    article = Article.objects.get(slug=slug)
+    return render(request, template_name='articles/show.html', context={'article': article})
